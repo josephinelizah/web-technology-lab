@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpeedX Bike Showroom</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial;
+            background:#111;
+            color:white;
+        }
+
+        header{
+            background:#ff3b30;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#222;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+        }
+
+        h2{
+            color:#ffb000;
+            text-align:center;
+            margin:25px;
+        }
+
+        .container{
+            width:400px;
+            max-width:90%;
+            margin:30px auto;
+            background:#222;
+            padding:25px;
+            border-radius:10px;
+        }
+
+        label{
+            display:block;
+            margin-top:15px;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-top:8px;
+            border:none;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:20px;
+            background:#ff3b30;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#ffb000;
+            color:black;
+        }
+
+        .error{
+            color:#ff3b30;
+            font-size:13px;
+        }
+
+        footer{
+            background:#222;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+
+        @media(max-width:500px){
+
+            nav a{
+                display:block;
+                margin:10px;
+            }
+
+            .container{
+                width:90%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>SpeedX Bike Showroom</h1>
+        <p>Ride Your Dream</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Bikes</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h2>Customer Registration</h2>
+
+    <div class="container">
+
+        <form id="myForm" novalidate>
+
+            <label>Name</label>
+            <input type="text" id="name">
+            <span class="error" id="nameError"></span>
+
+            <label>Email</label>
+            <input type="text" id="email">
+            <span class="error" id="emailError"></span>
+
+            <label>Password</label>
+            <input type="password" id="password">
+            <span class="error" id="passwordError"></span>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>© 2026 SpeedX Bike Showroom</p>
+    </footer>
+
+    <script src="validate.js"></script>
+
+</body>
+
+</html>

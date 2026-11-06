@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SpeedX Bike Showroom</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    background:#080808;
+    color:white;
+}
+
+header{
+    background:#111;
+    text-align:center;
+    padding:30px;
+    border-radius:0 0 30px 30px;
+}
+
+header h1{
+    font-size:65px;
+    color:#ff3b30;
+}
+
+header h2{
+    font-size:30px;
+    color:#ffb000;
+}
+
+header p{
+    font-size:22px;
+}
+
+nav{
+    background:#151515;
+    padding:15px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+
+nav li{
+    padding:10px 20px;
+    border-radius:10px;
+}
+
+nav a{
+    color:#ffb000;
+    text-decoration:none;
+    font-size:22px;
+}
+
+nav li:hover{
+    background:#ff3b30;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 30px;
+    margin:20px;
+    border-radius:25px;
+
+    background-image:
+        url("img_flwr.gif"),
+        url("paper.gif");
+
+    background-position:
+        right bottom,
+        left top;
+
+    background-repeat:
+        no-repeat,
+        repeat;
+
+    background-size:
+        120px 120px,
+        cover;
+}
+
+.hero p{
+    font-size:25px;
+}
+
+.offer{
+    background:#151515;
+    color:#ffb000;
+    padding:10px;
+    font-size:23px;
+    border-radius:15px;
+}
+
+.showroom{
+    text-align:center;
+    padding:40px;
+}
+
+.showroom img{
+    width:70%;
+    max-width:750px;
+    border:20px solid transparent;
+    border-image:url("border.png") 30 round;
+    border-radius:20px;
+}
+
+.container{
+    padding:20px;
+    text-align:center;
+}
+
+h2{
+    font-size:45px;
+    color:#ff3b30;
+    margin:35px 0 20px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    background:#151515;
+    padding:20px;
+    width:45%;
+    border-radius:25px;
+    border:2px solid #ff3b30;
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+}
+
+.card h3{
+    font-size:28px;
+    color:#ffb000;
+    margin:15px;
+}
+
+.card p{
+    font-size:20px;
+}
+
+table{
+    margin:auto;
+    font-size:22px;
+    background:#151515;
+    border-collapse:collapse;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th{
+    background:#ff3b30;
+    padding:15px 30px;
+}
+
+td{
+    padding:15px 30px;
+    border:1px solid #ff3b30;
+}
+
+td:last-child{
+    color:#ffb000;
+}
+
+table tr:nth-child(odd){
+    background-color:#222;
+}
+
+table tr:nth-child(even){
+    background-color:#151515;
+}
+
+table tr:hover{
+    background-color:#ffd966;
+    color:black;
+}
+
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.category{
+    background:#151515;
+    padding:20px;
+    width:40%;
+    border-radius:20px;
+}
+
+.category h3{
+    color:#ffb000;
+    font-size:27px;
+}
+
+ol,ul{
+    display:inline-block;
+    text-align:left;
+    font-size:22px;
+    line-height:1.8;
+}
+
+.bike-list{
+    margin:30px auto;
+    width:400px;
+    background:#151515;
+    padding:20px;
+    border-radius:20px;
+}
+
+.itemName{
+    display:block;
+    padding:15px;
+    margin:5px;
+    color:#ffb000;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:10px;
+}
+
+.itemImg{
+    opacity:0.2;
+    transition:opacity 0.3s ease;
+    margin-bottom:10px;
+}
+
+.itemImg img{
+    width:100px;
+    border-radius:10px;
+}
+
+.itemName:hover + .itemImg{
+    opacity:1;
+}
+
+.contact-form{
+    background:#151515;
+    width:70%;
+    max-width:600px;
+    margin:30px auto;
+    padding:30px;
+    border-radius:25px;
+}
+
+.contact-form label{
+    display:block;
+    text-align:left;
+    margin-top:15px;
+    font-size:20px;
+}
+
+.contact-form input{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:2px solid #555;
+    border-radius:10px;
+    font-size:18px;
+}
+
+.contact-form input:focus{
+    border:3px solid red;
+    background-color:#e9ffe9;
+    outline:none;
+}
+
+.contact-form input:required{
+    border-color:#ffb000;
+}
+
+.contact-form input:valid{
+    border-color:limegreen;
+}
+
+.contact-form input:invalid{
+    border-color:red;
+}
+
+.contact-form button{
+    margin-top:20px;
+    padding:12px 30px;
+    font-size:20px;
+    background:#ff3b30;
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#ffb000;
+    color:black;
+}
+
+footer{
+    background:#151515;
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+    border-radius:30px 30px 0 0;
+}
+
+footer h2{
+    margin:0 0 15px;
+}
+
+footer p{
+    font-size:20px;
+}
+
+footer a{
+    color:#ffb000;
+}
+
+@media screen and (max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cards,.categories{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card,.category{
+        width:80%;
+    }
+
+    .contact-form{
+        width:85%;
+    }
+
+}
+
+@media screen and (max-width:480px){
+
+    header h1{
+        font-size:40px;
+    }
+
+    header h2{
+        font-size:23px;
+    }
+
+    h2{
+        font-size:35px;
+    }
+
+    .showroom img{
+        width:95%;
+    }
+
+    .card,.category{
+        width:95%;
+    }
+
+    table{
+        font-size:16px;
+    }
+
+    th,td{
+        padding:10px;
+    }
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SPEEDX</h1>
+
+<h2>BIKE SHOWROOM</h2>
+
+<p>Ride Beyond Limits.</p>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#bikes">Popular Bikes</a></li>
+
+<li><a href="#categories">Categories</a></li>
+
+<li><a href="#process">Buying Process</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+<li><a href="https://www.yamaha-motor-india.com/" target="_blank">Yamaha</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<p>Welcome to <b style="color:#ff3b30;">SpeedX Bike Showroom</b>. We offer sports bikes, cruisers and scooters at affordable prices.</p>
+
+</section>
+
+<marquee class="offer">~ NEW ARRIVALS ~ BEST OFFERS ~ BOOK YOUR TEST RIDE TODAY ~</marquee>
+
+<div class="showroom">
+
+<a href="showroom.jpg">
+
+<img src="showroom.jpg" alt="Bike Showroom">
+
+</a>
+
+</div>
+
+<div class="container">
+
+<h2 id="bikes">Popular Bikes</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="bike1.jpg" alt="Bike 1">
+
+<h3>Sports Bike</h3>
+
+<p>Powerful bikes designed for speed and performance.</p>
+
+</div>
+
+<div class="card">
+
+<img src="bike2.jpg" alt="Bike 2">
+
+<h3>Cruiser Bike</h3>
+
+<p>Comfortable bikes designed for long rides.</p>
+
+</div>
+
+</div>
+
+<h2>Bike Price List</h2>
+
+<table>
+
+<tr>
+
+<th>Bike</th>
+
+<th>Price</th>
+
+</tr>
+
+<tr>
+
+<td>Yamaha R15</td>
+
+<td>₹1,85,000</td>
+
+</tr>
+
+<tr>
+
+<td>Royal Enfield Classic 350</td>
+
+<td>₹2,05,000</td>
+
+</tr>
+
+<tr>
+
+<td>Honda Activa</td>
+
+<td>₹82,000</td>
+
+</tr>
+
+</table>
+
+<h2 id="categories">Bike Categories</h2>
+
+<div class="categories">
+
+<div class="category">
+
+<h3>Sports Bike</h3>
+
+<p>High-speed performance bikes.</p>
+
+</div>
+
+<div class="category">
+
+<h3>Cruiser Bike</h3>
+
+<p>Comfortable bikes for long rides.</p>
+
+</div>
+
+</div>
+
+<h2>Explore Our Bikes</h2>
+
+<div class="bike-list">
+
+<span class="itemName">Yamaha R15</span>
+
+<div class="itemImg">
+
+<img src="item1.jpg" alt="Yamaha R15">
+
+</div>
+
+<span class="itemName">Royal Enfield Classic 350</span>
+
+<div class="itemImg">
+
+<img src="bike2.jpg" alt="Royal Enfield">
+
+</div>
+
+<span class="itemName">Honda Activa</span>
+
+<div class="itemImg">
+
+<img src="img_flower.jpg" alt="Honda Activa">
+
+</div>
+
+</div>
+
+<h2 id="process">Buying Process</h2>
+
+<ol>
+
+<li>Select Your Bike</li>
+
+<li>Submit Documents</li>
+
+<li>Make Payment</li>
+
+<li>Take Delivery</li>
+
+</ol>
+
+<h2>Facilities</h2>
+
+<ul>
+
+<li>Easy Finance</li>
+
+<li>Insurance</li>
+
+<li>Free Service</li>
+
+<li>Test Ride</li>
+
+</ul>
+
+<h2>Book a Test Ride</h2>
+
+<form class="contact-form">
+
+<label for="name">Name:</label>
+
+<input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+<label for="email">Email:</label>
+
+<input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+<label for="phone">Phone:</label>
+
+<input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+<button type="submit">Book Test Ride</button>
+
+</form>
+
+</div>
+
+<footer id="contact">
+
+<h2>Contact Us</h2>
+
+<p><a href="mailto:sales@speedxbikes.com">sales@speedxbikes.com</a></p>
+
+<p><a href="tel:+911234567890">+91 1234567890</a></p>
+
+<p>©2026 SpeedX Bike Showroom</p>
+
+</footer>
+
+</body>
+
+</html>

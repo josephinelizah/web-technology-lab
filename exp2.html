@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bike Showroom Form</title>
+</head>
+
+<body bgcolor="beige" text="black">
+
+<center>
+
+<h2 style="font-size:50px;">Bike Showroom Registration Form</h2>
+
+<form action="#" method="post">
+
+<label for="name" style="font-size:28px;">Customer Name:</label><br>
+<input type="text" id="name" name="name" placeholder="Enter your name" required style="font-size:22px; width:350px; height:35px;"><br><br>
+
+<label for="email" style="font-size:28px;">Email:</label><br>
+<input type="email" id="email" name="email" placeholder="Enter your email" required style="font-size:22px; width:350px; height:35px;"><br><br>
+
+<label for="password" style="font-size:28px;">Password:</label><br>
+<input type="password" id="password" name="password" required style="font-size:22px; width:350px; height:35px;"><br><br>
+
+<label for="age" style="font-size:28px;">Age:</label><br>
+<input type="number" id="age" name="age" min="18" max="60" style="font-size:22px; width:150px; height:35px;"><br><br>
+
+<label for="visit" style="font-size:28px;">Preferred Visit Date:</label><br>
+<input type="date" id="visit" name="visit" style="font-size:22px; height:35px;"><br><br>
+
+<label style="font-size:28px;">Bike Type:</label><br>
+<input type="radio" name="bike"> <span style="font-size:24px;">Sports</span>
+<input type="radio" name="bike"> <span style="font-size:24px;">Cruiser</span><br><br>
+
+<label style="font-size:28px;">Services:</label><br>
+<input type="checkbox"> <span style="font-size:24px;">Finance</span>
+<input type="checkbox"> <span style="font-size:24px;">Insurance</span>
+<input type="checkbox"> <span style="font-size:24px;">Service</span><br><br>
+
+<label for="brand" style="font-size:28px;">Bike Brand:</label><br>
+<select id="brand" style="font-size:22px; width:200px; height:35px;">
+    <option>Yamaha</option>
+    <option>Honda</option>
+    <option>Royal Enfield</option>
+</select><br><br>
+
+<label for="city" style="font-size:28px;">City:</label><br>
+<input list="cities" style="font-size:22px; width:250px; height:35px;">
+<datalist id="cities">
+    <option value="Chennai">
+    <option value="Coimbatore">
+    <option value="Madurai">
+</datalist><br><br>
+
+<label for="rating" style="font-size:28px;">Budget:</label><br>
+<input type="range" id="rating" min="1" max="10"><br><br>
+
+<label for="color" style="font-size:28px;">Bike Color:</label><br>
+<input type="color" id="color"><br><br>
+
+<button type="submit" style="font-size:25px; padding:10px 30px;">
+    Register
+</button>
+
+</form>
+
+</center>
+
+</body>
+</html>

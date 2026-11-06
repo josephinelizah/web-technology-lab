@@ -1,0 +1,13 @@
+{
+  "name": "exp8",
+  "version": "1.0.0",
+  "description": "Node.js Server Side Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "type": "commonjs"
+}

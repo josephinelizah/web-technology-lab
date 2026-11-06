@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpeedX Task Tracker</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial;
+            background:#111;
+            color:white;
+        }
+
+        header{
+            background:#ff3b30;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#222;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+        }
+
+        h2{
+            color:#ffb000;
+            text-align:center;
+            margin:25px;
+        }
+
+        .container{
+            width:500px;
+            max-width:90%;
+            margin:30px auto;
+            background:#222;
+            padding:25px;
+            border-radius:10px;
+        }
+
+        form{
+            display:flex;
+            gap:10px;
+        }
+
+        input{
+            flex:1;
+            padding:12px;
+            border:none;
+            border-radius:5px;
+        }
+
+        button{
+            padding:12px;
+            background:#ff3b30;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#ffb000;
+            color:black;
+        }
+
+        .filters{
+            display:flex;
+            justify-content:center;
+            gap:10px;
+            margin:20px 0;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        li{
+            background:#333;
+            padding:12px;
+            margin:10px 0;
+            border-radius:5px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:10px;
+        }
+
+        li span{
+            flex:1;
+            overflow-wrap:anywhere;
+        }
+
+        .completed{
+            text-decoration:line-through;
+            color:#999;
+        }
+
+        .delete{
+            background:#ff3b30;
+        }
+
+        #counter{
+            text-align:center;
+            color:#ffb000;
+            margin-top:20px;
+        }
+
+        footer{
+            background:#222;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+
+        @media(max-width:500px){
+
+            nav a{
+                display:block;
+                margin:10px;
+            }
+
+            form{
+                flex-direction:column;
+            }
+
+            .filters{
+                flex-wrap:wrap;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>SpeedX Bike Showroom</h1>
+        <p>Ride Your Dream</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Bikes</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h2>Showroom Task Tracker</h2>
+
+    <div class="container">
+
+        <form id="taskForm">
+
+            <input type="text" id="taskInput" placeholder="Enter a task">
+
+            <button type="submit">Add Task</button>
+
+        </form>
+
+        <div class="filters">
+
+            <button onclick="setFilter('all')">All</button>
+            <button onclick="setFilter('open')">Open</button>
+            <button onclick="setFilter('completed')">Completed</button>
+
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="counter"></p>
+
+    </div>
+
+    <footer>
+        <p>© 2026 SpeedX Bike Showroom</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

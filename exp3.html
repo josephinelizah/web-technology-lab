@@ -1,0 +1,416 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SpeedX Bike Showroom - Responsive Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    background:#080808;
+    color:white;
+}
+
+header{
+    background:#111;
+    text-align:center;
+    padding:30px;
+    border-radius:0 0 30px 30px;
+}
+
+header h1{
+    font-size:60px;
+    color:#ff3b30;
+}
+
+header h2{
+    font-size:30px;
+    color:#ffb000;
+}
+
+header p{
+    font-size:22px;
+}
+
+nav{
+    background:#151515;
+    padding:15px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+
+nav li{
+    padding:10px 20px;
+    border-radius:10px;
+}
+
+nav a{
+    color:#ffb000;
+    text-decoration:none;
+    font-size:22px;
+}
+
+nav li:hover{
+    background:#ff3b30;
+}
+
+.hero{
+    background:#222;
+    text-align:center;
+    padding:50px;
+    margin:20px;
+    border-radius:25px;
+}
+
+.hero h2{
+    color:#ff3b30;
+    font-size:40px;
+}
+
+.hero p{
+    font-size:23px;
+    margin-top:15px;
+}
+
+.container{
+    display:flex;
+    padding:20px;
+    gap:25px;
+}
+
+.sidebar{
+    width:25%;
+    background:#151515;
+    padding:25px;
+    border-radius:20px;
+    height:fit-content;
+}
+
+.sidebar h2{
+    color:#ff3b30;
+    margin-bottom:15px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:12px;
+    border-bottom:1px solid #555;
+    font-size:20px;
+    color:#ffb000;
+}
+
+/* Main Content */
+
+.content{
+    width:75%;
+}
+
+.content h2{
+    color:#ff3b30;
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.content p{
+    font-size:20px;
+    line-height:1.6;
+}
+
+.cards{
+    display:flex;
+    gap:25px;
+    margin-top:25px;
+}
+
+.card{
+    flex:1;
+    background:#151515;
+    padding:20px;
+    border:2px solid #ff3b30;
+    border-radius:20px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    border-radius:15px;
+}
+
+.card h3{
+    color:#ffb000;
+    font-size:27px;
+    margin:15px;
+}
+
+.card p{
+    font-size:18px;
+}
+
+button{
+    background:#ff3b30;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    margin-top:15px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffb000;
+    color:black;
+}
+
+footer{
+    background:#151515;
+    text-align:center;
+    padding:30px;
+    margin-top:20px;
+    border-radius:30px 30px 0 0;
+}
+
+footer h2{
+    color:#ff3b30;
+    margin-bottom:10px;
+}
+
+footer p{
+    font-size:20px;
+}
+
+@media screen and (max-width:992px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar,
+.content{
+    width:100%;
+}
+
+.cards{
+    flex-wrap:wrap;
+}
+
+.card{
+    width:45%;
+}
+
+}
+
+@media screen and (max-width:768px){
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar,
+.content{
+    width:100%;
+}
+
+.cards{
+    flex-direction:column;
+}
+
+.card{
+    width:100%;
+}
+
+.hero{
+    padding:30px;
+}
+
+}
+
+@media screen and (max-width:480px){
+
+header h1{
+    font-size:40px;
+}
+
+header h2{
+    font-size:23px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.content h2{
+    font-size:28px;
+}
+
+.card h3{
+    font-size:23px;
+}
+
+button{
+    width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SPEEDX</h1>
+
+<h2>BIKE SHOWROOM</h2>
+
+<p>Ride Beyond Limits.</p>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Sports Bikes</a></li>
+
+<li><a href="#">Cruisers</a></li>
+
+<li><a href="#">Offers</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h2>Welcome to SpeedX Bike Showroom</h2>
+
+<p>
+Explore our collection of sports bikes, cruisers and scooters.
+Find your perfect ride at the best prices.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="sidebar">
+
+<h2>Bike Categories</h2>
+
+<ul>
+
+<li>Sports Bikes</li>
+
+<li>Cruiser Bikes</li>
+
+<li>Street Bikes</li>
+
+<li>Electric Bikes</li>
+
+<li>Scooters</li>
+
+<li>Adventure Bikes</li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h2>Popular Bikes</h2>
+
+<p>
+SpeedX offers a wide range of bikes designed for performance,
+comfort and style. Choose from our popular models and experience
+the thrill of riding.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="bike1.jpg" alt="Yamaha R15">
+
+<h3>Yamaha R15</h3>
+
+<p>
+A powerful sports bike designed for speed and performance.
+</p>
+
+<button>View Details</button>
+
+</div>
+
+<div class="card">
+
+<img src="bike2.jpg" alt="Royal Enfield Classic 350">
+
+<h3>Classic 350</h3>
+
+<p>
+A stylish cruiser bike designed for comfortable long rides.
+</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h2>Contact SpeedX</h2>
+
+<p>sales@speedxbikes.com</p>
+
+<p>+91 1234567890</p>
+
+<p>© 2026 SpeedX Bike Showroom</p>
+
+</footer>
+
+</body>
+
+</html>
+```
